@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>مراحل تطور القمر الحقيقي مش زي بعض النااااس</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				background-color: #f0f8ff;
+			}
+			header {
+				background-color: #1e90ff;
+				color: white;
+				padding: 20px;
+			}
+			img {
+				width: 300px;
+				height: auto;
+				margin-top: 20px;
+			}
+			.button-container {
+				margin-top: 20px;
+			}
+			button {
+				background-color: #ff6347;
+				color: white;
+				border: none;
+				padding: 10px 20px;
+				margin: 10px;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 16px;
+				display: block; /* هذا يضع الأزرار تحت بعضها */
+				width: 200px; /* يمكنك تغيير العرض حسب الرغبة */
+				margin-left: auto;
+				margin-right: auto;
+			}
+			button:hover {
+				background-color: #ff4500;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>مراحل تطور القمر الحقيقي مش زي بعض النااااس 🌙</h1>
+			<p>اكبس ع الكبسات تحت يا نوبة بدهاش شرح</p>
+		</header>
+
+		<main>
+			<img
+				id="moonImage"
+				src="https://cdn.mos.cms.futurecdn.net/53c7cdbb3ad7e99c82a60b3e64fa3ae2-1200-80.jpg"
+				alt="الهلال"
+			/>
+
+			<div class="button-container">
+				<button
+					onclick="changeMoon('https://modo3.com/thumbs/fit630x300/21801/1430295184/%D9%83%D9%8A%D9%81_%D9%8A%D8%AA%D9%83%D9%88%D9%86_%D8%A7%D9%84%D9%87%D9%84%D8%A7%D9%84.jpg', 'هل تقصد الهلال')"
+				>
+					المرحلة الاولى 🌑
+				</button>
+				<button
+					onclick="changeMoon('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4PhKLOZOfxP1XvqJuPyfZ8ZBAwuNtuBE9w&s', 'هل تقصد نصف القمر')"
+				>
+					المرحلة الثانية 🌒
+				</button>
+				<button onclick="changeMoon('https://www2.0zz0.com/2024/12/12/21/594540163.jpeg', 'هل تقصد محمد')">
+					المرحلة الثالثة 🌕
+				</button>
+			</div>
+
+			<div id="output" style="margin-top: 20px; font-size: 18px; color: #333"></div>
+		</main>
+
+		<script>
+			function changeMoon(imageUrl, description) {
+				const moonImage = document.getElementById('moonImage');
+				moonImage.src = imageUrl;
+				moonImage.alt = description;
+				document.getElementById('output').textContent = ` ${description}`;
+			}
+		</script>
+	</body>
+</html>
